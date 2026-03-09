@@ -1,0 +1,56 @@
+main{
+  padding:75px 0 0 0;
+}
+#me{
+  width:350px;
+  display: inline-block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#img{
+  float: left;
+  margin-right: 20px;
+}
+.selfCare{
+  display: flex;
+  width:78dvw;
+}
+.selfCare p{
+  display: flex;
+  font-size:20px;
+}
+#info a{
+  color:#ffff;
+  font-weight:normal;
+}
+@media screen and (max-width:768px){
+main{
+  padding: 75px 0 0 0;
+}  #me{
+    width:200px;
+    display: inline-block;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  #img{
+  float: none;
+}
+  .selfCare{
+    display: block;
+  }
+  .selfCare p{
+    display: block;
+    font-size:15px;
+  }
+  .title{
+  font-size:22px;
+  }
+  .friend{
+  font-size: 15px;
+}
+}
+@media (prefers-color-scheme: light){
+    #info a{
+    color: black;
+  }
+}
