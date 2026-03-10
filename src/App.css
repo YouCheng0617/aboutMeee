@@ -60,6 +60,8 @@ footer a{
   border: 5px outset black;
   border-radius: 75%;
   color: white;
+  transition: 350ms;
+
 }
 footer a:hover{
   font-size: 30px;
