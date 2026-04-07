@@ -1,6 +1,7 @@
-main{
-  padding:75px 0 0 0;
+main {
+  padding: 75px 0 0 0;
 }
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -8,52 +9,57 @@ main{
   text-align: center;
 }
 
-header{
-  width:100dvw;
-  height:80px;
-  background-color:#2a3342;
-  position:fixed;
-  z-index:9999;
-  top:0;
-  left:0;
-  
+header {
+  width: 100dvw;
+  height: 80px;
+  background-color: #2a3342;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+
 }
-header p{
-  display:flex inline;
+
+header p {
+  display: flex inline;
 }
-#nowTime{
-  font-size:30px;
-  font-weight:bolder;
+
+#nowTime {
+  font-size: 30px;
+  font-weight: bolder;
   text-align: left;
   padding: 0 10%;
 }
-#yogurtAnime{
-   font-size:55px;
-   display: inline-block;
-   font-weight:bolder;
+
+#yogurtAnime {
+  font-size: 55px;
+  display: inline-block;
+  font-weight: bolder;
 }
-.friend{
+
+.friend {
   font-size: 30px;
 }
-#Moew{
-  background:linear-gradient(
-    45deg,
-  #B87333,
-  #C16B2E,
-  #C87A3A,
-  #CD7F32,
-  #D18B4C,
-  #D69C60,
-  #DDAE73,
-  #FFD39B
-  );
-  background-clip:text;
-  color:transparent;
+
+#Moew {
+  background: linear-gradient(45deg,
+      #B87333,
+      #C16B2E,
+      #C87A3A,
+      #CD7F32,
+      #D18B4C,
+      #D69C60,
+      #DDAE73,
+      #FFD39B);
+  background-clip: text;
+  color: transparent;
 }
-footer{
-  margin:40px;
+
+footer {
+  margin: 40px;
 }
-footer a{
+
+footer a {
   margin: 0px 20px;
   padding: 15px;
   font-size: 25px;
@@ -63,38 +69,52 @@ footer a{
   transition: 350ms;
 
 }
-footer a:hover{
+
+footer a:hover {
   font-size: 30px;
-  color: #8db9ff ;
+  color: #8db9ff;
   background-color: rgba(193, 193, 193, 0.481);
   font-weight: bolder;
 }
+
 @media screen and (max-width:768px) {
-  main{
-    padding:75px 0 0 0;
+  main {
+    padding: 75px 0 0 0;
   }
-  #yogurtAnime{
-    font-size:16px;
-    width:78dvw;
+
+  #yogurtAnime {
+    font-size: 16px;
+    width: 78dvw;
     display: inline-block;
-    font-weight:bolder;
+    font-weight: bolder;
   }
-  #nowTime{
-    font-size:20px;
-    font-weight:bolder;
+
+  #nowTime {
+    font-size: 20px;
+    font-weight: bolder;
   }
-  footer a{
-  margin: 0px 8px;
-  padding: 8px;
-  font-size: 12px;
+
+  footer a {
+    margin: 0px 8px;
+    padding: 8px;
+    font-size: 12px;
   }
-  footer a:hover{
+
+  footer a:hover {
     font-size: 14px;
   }
 }
 
-@media (prefers-color-scheme: light){
-  header{
+@media (prefers-color-scheme: light) {
+  header {
     background-color: #ddeaff;
+  }
+
+  footer a {
+    color: #000000;
+  }
+
+  footer a:hover {
+    color: #355ca0;
   }
 }
