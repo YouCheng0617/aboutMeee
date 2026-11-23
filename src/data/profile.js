@@ -7,10 +7,10 @@ export const profile = {
   nameZh: '宥成',
   birthday: new Date(2007, 5, 17), // 月份從 0 開始，5 = 6月
   // 首頁打字動畫會輪流顯示這些
-  roles: ['資管科學生', '網頁開發新手', '日文愛好者', '料理人', 'ENFP 快樂小狗'],
+  roles: ['資管科學生', '後端開發者', '日文愛好者', '料理人', 'ENFP 快樂小狗'],
   intro:
-    '嗨！我是宥成，臺中科技大學資管科的學生。喜歡料理、唱歌、說故事，也喜歡看動漫，' +
-    '沒事就會問 ChatGPT 一堆哲學問題。這個網站是我從網頁小白開始一路寫出來的地方。',
+    '嗨！我是宥成，臺中科技大學資管科的學生，平常主要在寫後端。' +
+    '喜歡料理、唱歌、說故事，也喜歡看動漫，沒事就會問 ChatGPT 一堆哲學問題。',
   school: { name: '臺中科技大學 NUTC', url: 'https://www.nutc.edu.tw/' },
   department: { name: '資管科 IM', url: 'https://im.nutc.edu.tw/' },
   zodiac: '雙子座',
@@ -23,7 +23,7 @@ export const skills = [
   {
     icon: '💻',
     title: '網頁開發',
-    description: '正在努力學習中，這個網站就是練習成果',
+    description: '主力在後端，前端也寫得出來',
     items: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Git'],
   },
   {
@@ -45,7 +45,7 @@ export const skills = [
 export const projects = [
   {
     title: '個人網站 aboutMeee',
-    description: '就是你正在看的這個網站！用 React + Vite 打造，從網頁小白時期一路改到現在。',
+    description: '就是你正在看的這個網站！用 React + Vite 打造，部署在 GitHub Pages。',
     tags: ['React', 'Vite', 'CSS'],
     repo: 'https://github.com/YouCheng0617/aboutMeee',
   },
