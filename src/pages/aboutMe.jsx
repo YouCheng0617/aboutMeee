@@ -22,8 +22,8 @@ export default function AboutMe() {
       <div className='selfCare'>
 
         <div id='img'>
-          <img src="image/owo.jpg" alt="yogurt" id='me' />
-          <h2>yogurt(優格)</h2>
+          <img src="image/owo.jpg" alt="youcheng" id='me' />
+          <h2>youcheng(宥成)</h2>
         </div>
 
         <div id='info'>

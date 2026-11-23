@@ -13,9 +13,9 @@ const TIME_FORMAT = "YYYY年 MMM Do HH:mm:ss (ddd)"
 
 // 依照小時決定招呼語
 function getGreeting(hour) {
-  if (hour >= 5 && hour <= 10) return "おはよう！yogurtの自己紹介です。"
-  if (hour >= 11 && hour <= 16) return "こんにちは！yogurtの自己紹介です。"
-  return "こんばんは！yogurtの自己紹介です。"
+  if (hour >= 5 && hour <= 10) return "おはよう！youchengの自己紹介です。"
+  if (hour >= 11 && hour <= 16) return "こんにちは！youchengの自己紹介です。"
+  return "こんばんは！youchengの自己紹介です。"
 }
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   const yogurt = getGreeting(now.hour())
 
   useEffect(() => {
-    const orTitle = "優格の個網"
+    const orTitle = "宥成の個網"
     const chTitle = "你怎麼拋棄我了:("
     const handleVisibilityChange = () => {
       document.title = document.hidden ? chTitle : orTitle
