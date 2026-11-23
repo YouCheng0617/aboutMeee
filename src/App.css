@@ -726,26 +726,16 @@
   color: #fff;
 }
 
-.project-card--placeholder {
-  align-items: center;
-  justify-content: center;
-  border-style: dashed;
-  text-align: center;
-}
-
-.project-card--placeholder p {
-  flex: 0;
-  margin: 0;
-}
-
-.placeholder-icon {
-  margin-bottom: 12px;
-  color: var(--muted);
-  animation: bob 2.4s ease-in-out infinite;
-}
-
-@keyframes bob {
-  50% { transform: translateY(-8px); }
+.project-role {
+  align-self: flex-start;
+  margin-bottom: 14px;
+  padding: 4px 12px;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 212, 255, 0.08);
+  color: var(--c2);
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* ============ 友站 ============ */

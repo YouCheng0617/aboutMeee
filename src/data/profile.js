@@ -50,10 +50,29 @@ export const skills = [
 ]
 
 // 新增作品：複製一個 { ... } 區塊，改成你的內容即可
-// demo / repo 沒有的話可以刪掉那一行
+// role 會顯示成卡片上方的角色標籤；demo / repo 沒有的話可以刪掉那一行
 export const projects = [
   {
+    title: '心情漂流瓶',
+    role: '後端',
+    description:
+      '畢業專題。情緒分享社群：把心情寫成漂流瓶丟進不同主題的「海域」，可具名或匿名發文，' +
+      '支援留言、投票、Markdown、追蹤與通知，還有小遊戲樂園。',
+    tags: ['畢業專題', '社群平台', '團隊開發'],
+    demo: 'https://drift-bottles.xyz/',
+  },
+  {
+    title: '沿途',
+    role: '全端・獨立開發',
+    description:
+      '把考試練習變成一趟火車旅程的陪伴練習網站。上傳 PDF、PPT、Word 題目檔，交給 Google AI 整理成題庫；' +
+      '目前有日文五十音、濁音、拗音路線，還有吉祥物雪丸陪你練習。',
+    tags: ['AI 題庫整理', 'Google AI', 'Vercel'],
+    demo: 'https://along-theway.vercel.app/',
+  },
+  {
     title: '個人網站 aboutMeee',
+    role: '全端・獨立開發',
     description: '就是你正在看的這個網站！用 React + Vite 打造，部署在 GitHub Pages。',
     tags: ['React', 'Vite', 'CSS'],
     repo: 'https://github.com/YouCheng0617/aboutMeee',

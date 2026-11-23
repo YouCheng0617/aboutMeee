@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { TypeAnimation } from 'react-type-animation'
-import { ArrowRight, ArrowUpRight, Construction } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { GithubIcon } from './icons'
 import { profile, skills, projects, friends, socials } from '../data/profile'
 import { getAge, getGreeting, useNow } from '../hooks'
@@ -138,6 +138,7 @@ function ProjectCard({ project }) {
 
   return (
     <article ref={ref} className="card project-card" onPointerMove={handleMove} onPointerLeave={handleLeave}>
+      {project.role && <span className="project-role">{project.role}</span>}
       <h3>{project.title}</h3>
       <p>{project.description}</p>
       <ul className="chips chips--small">
@@ -148,7 +149,7 @@ function ProjectCard({ project }) {
       <div className="project-links">
         {project.demo && (
           <a href={project.demo} target="_blank" rel="noreferrer">
-            Demo <ArrowUpRight size={16} />
+            前往網站 <ArrowUpRight size={16} />
           </a>
         )}
         {project.repo && (
@@ -171,12 +172,6 @@ export function Projects() {
             <ProjectCard project={project} />
           </div>
         ))}
-        <div className="reveal" style={{ '--d': projects.length }}>
-          <div className="card project-card project-card--placeholder">
-            <Construction className="placeholder-icon" size={36} strokeWidth={1.5} aria-hidden="true" />
-            <p>更多作品製作中…</p>
-          </div>
-        </div>
       </div>
     </section>
   )
