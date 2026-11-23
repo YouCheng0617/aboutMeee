@@ -13,12 +13,12 @@ export const profile = {
   roles: ['資管科學生', '後端開發者', '日文愛好者', '料理人', 'ENFP 快樂小狗'],
   intro:
     '嗨！我是宥成，臺中科技大學資管科的學生，平常主要在寫後端。' +
-    '喜歡料理、唱歌、說故事，也喜歡看動漫，沒事就會問 ChatGPT 一堆哲學問題。',
+    '喜歡料理、唱歌、說故事，也喜歡看動漫，沒事就會問 AI 一堆哲學問題。',
   school: { name: '臺中科技大學 NUTC', url: 'https://www.nutc.edu.tw/' },
   department: { name: '資管科 IM', url: 'https://im.nutc.edu.tw/' },
   zodiac: '雙子座',
   mbti: 'ENFP-T 快樂小狗',
-  hobbies: '料理、說話、唱歌、聽故事、看動漫、問 ChatGPT 哲學問題',
+  hobbies: '料理、說話、唱歌、聽故事、看動漫、問 AI 哲學問題',
   travel: '去過 0 國（想去：日本、土耳其）',
 }
 
