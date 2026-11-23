@@ -27,7 +27,7 @@ export const skills = [
     icon: Server,
     title: '後端',
     description: '主力戰場',
-    items: ['Node.js', 'PostgreSQL', 'Linux', 'Git'],
+    items: ['Node.js', 'TypeScript', 'PostgreSQL', 'Linux', 'Git'],
   },
   {
     icon: Code,
