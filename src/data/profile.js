@@ -21,10 +21,16 @@ export const profile = {
 
 export const skills = [
   {
+    icon: '⚙️',
+    title: '後端',
+    description: '主力戰場',
+    items: ['Node.js', 'PostgreSQL', 'Linux', 'Git'],
+  },
+  {
     icon: '💻',
-    title: '網頁開發',
-    description: '主力在後端，前端也寫得出來',
-    items: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Git'],
+    title: '前端',
+    description: '寫得出來，美感另計',
+    items: ['Next.js', 'React', 'JavaScript', 'HTML', 'CSS', 'Vite'],
   },
   {
     icon: '🗣️',
