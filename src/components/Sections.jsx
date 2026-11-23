@@ -1,5 +1,7 @@
 import { useRef } from 'react'
 import { TypeAnimation } from 'react-type-animation'
+import { ArrowRight, ArrowUpRight, Construction } from 'lucide-react'
+import { GithubIcon } from './icons'
 import { profile, skills, projects, friends, socials } from '../data/profile'
 import { getAge, getGreeting, useNow } from '../hooks'
 
@@ -32,7 +34,9 @@ export function Hero() {
         <TypeAnimation sequence={ROLE_SEQUENCE} wrapper="span" repeat={Infinity} />
       </div>
       <div className="btn-row hero-in" style={{ '--i': 3 }}>
-        <a className="btn btn-primary" href="#projects">看看作品 →</a>
+        <a className="btn btn-primary" href="#projects">
+          看看作品 <ArrowRight className="btn-arrow" size={18} />
+        </a>
         <a className="btn btn-ghost" href="#contact">聯絡我</a>
       </div>
       <a href="#about" className="scroll-hint" aria-label="往下捲動" />
@@ -94,7 +98,9 @@ export function Skills() {
       <div className="skills-grid">
         {skills.map((group, i) => (
           <div key={group.title} className="card skill-card reveal" style={{ '--d': i }}>
-            <span className="skill-icon" aria-hidden="true">{group.icon}</span>
+            <span className="skill-icon" aria-hidden="true">
+              <group.icon size={24} strokeWidth={1.75} />
+            </span>
             <h3>{group.title}</h3>
             <p>{group.description}</p>
             <ul className="chips">
@@ -140,8 +146,16 @@ function ProjectCard({ project }) {
         ))}
       </ul>
       <div className="project-links">
-        {project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Demo ↗</a>}
-        {project.repo && <a href={project.repo} target="_blank" rel="noreferrer">GitHub ↗</a>}
+        {project.demo && (
+          <a href={project.demo} target="_blank" rel="noreferrer">
+            Demo <ArrowUpRight size={16} />
+          </a>
+        )}
+        {project.repo && (
+          <a href={project.repo} target="_blank" rel="noreferrer">
+            <GithubIcon size={16} /> GitHub
+          </a>
+        )}
       </div>
     </article>
   )
@@ -159,7 +173,7 @@ export function Projects() {
         ))}
         <div className="reveal" style={{ '--d': projects.length }}>
           <div className="card project-card project-card--placeholder">
-            <span className="placeholder-icon" aria-hidden="true">🚧</span>
+            <Construction className="placeholder-icon" size={36} strokeWidth={1.5} aria-hidden="true" />
             <p>更多作品製作中…</p>
           </div>
         </div>
@@ -212,7 +226,8 @@ export function Contact() {
               rel="noreferrer"
               className={`btn ${i === 0 ? 'btn-primary' : 'btn-ghost'}`}
             >
-              {social.label} ↗
+              {social.icon && <social.icon size={18} />}
+              {social.label}
             </a>
           ))}
         </div>

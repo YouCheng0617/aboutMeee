@@ -113,6 +113,18 @@
   transform: translateY(-3px);
 }
 
+.btn svg {
+  flex-shrink: 0;
+}
+
+.btn-arrow {
+  transition: transform 0.25s var(--ease);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
 .btn-primary {
   background: linear-gradient(120deg, var(--c1), var(--c3));
   color: #fff;
@@ -620,7 +632,14 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface-hover);
-  font-size: 26px;
+  color: var(--text);
+  transition: color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover .skill-icon {
+  color: var(--c2);
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 24px -6px var(--c2);
 }
 
 .skill-card h3 {
@@ -695,6 +714,9 @@
 }
 
 .project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--c2);
   font-weight: 600;
   transition: color 0.2s;
@@ -718,7 +740,7 @@
 
 .placeholder-icon {
   margin-bottom: 12px;
-  font-size: 36px;
+  color: var(--muted);
   animation: bob 2.4s ease-in-out infinite;
 }
 

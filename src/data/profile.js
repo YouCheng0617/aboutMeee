@@ -1,6 +1,9 @@
 // ============================================================
 // 網站上所有的內容都在這個檔案，想改文字、加作品、加友站，改這裡就好
+// 圖示來自 Lucide，可以到 https://lucide.dev/icons 找，再 import 進來
 // ============================================================
+import { Server, Code, Languages, Sparkles, Mail } from 'lucide-react'
+import { GithubIcon } from '../components/icons'
 
 export const profile = {
   name: 'youcheng',
@@ -21,25 +24,25 @@ export const profile = {
 
 export const skills = [
   {
-    icon: '⚙️',
+    icon: Server,
     title: '後端',
     description: '主力戰場',
     items: ['Node.js', 'PostgreSQL', 'Linux', 'Git'],
   },
   {
-    icon: '💻',
+    icon: Code,
     title: '前端',
     description: '寫得出來，美感另計',
     items: ['Next.js', 'React', 'JavaScript', 'HTML', 'CSS', 'Vite'],
   },
   {
-    icon: '🗣️',
+    icon: Languages,
     title: '語言',
     description: '會說、也愛說',
     items: ['中文', '日文'],
   },
   {
-    icon: '✨',
+    icon: Sparkles,
     title: '其他專長',
     description: '寫程式以外的我',
     items: ['社會科', '說故事', '料理', '唱歌'],
@@ -69,6 +72,6 @@ export const friends = [
 
 // 想加 IG、Discord 等，照格式加一行就好
 export const socials = [
-  { label: 'GitHub', url: 'https://github.com/YouCheng0617' },
-  { label: 'Email', url: 'mailto:20070617TimmyAlan@gmail.com' },
+  { label: 'GitHub', url: 'https://github.com/YouCheng0617', icon: GithubIcon },
+  { label: 'Email', url: 'mailto:20070617TimmyAlan@gmail.com', icon: Mail },
 ]
