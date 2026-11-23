@@ -37,29 +37,12 @@ header p {
   font-weight: bolder;
 }
 
-.friend {
-  font-size: 30px;
-}
-
-#Moew {
-  background: linear-gradient(45deg,
-      #B87333,
-      #C16B2E,
-      #C87A3A,
-      #CD7F32,
-      #D18B4C,
-      #D69C60,
-      #DDAE73,
-      #FFD39B);
-  background-clip: text;
-  color: transparent;
-}
-
 footer {
   margin: 40px;
 }
 
 footer a {
+  display: inline-block;
   margin: 0px 20px;
   padding: 15px;
   font-size: 25px;
@@ -67,21 +50,16 @@ footer a {
   border-radius: 75%;
   color: white;
   transition: 350ms;
-
 }
 
+/* 用 transform 放大，不會推擠旁邊的按鈕 */
 footer a:hover {
-  font-size: 30px;
+  transform: scale(1.2);
   color: #8db9ff;
   background-color: rgba(193, 193, 193, 0.481);
-  font-weight: bolder;
 }
 
 @media screen and (max-width:768px) {
-  main {
-    padding: 75px 0 0 0;
-  }
-
   #yogurtAnime {
     font-size: 16px;
     width: 78dvw;
@@ -98,10 +76,6 @@ footer a:hover {
     margin: 0px 8px;
     padding: 8px;
     font-size: 12px;
-  }
-
-  footer a:hover {
-    font-size: 14px;
   }
 }
 
