@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import './friend.css'
 
 export default function Friend() {

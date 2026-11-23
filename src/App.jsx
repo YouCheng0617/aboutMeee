@@ -4,62 +4,52 @@ import './App.css'
 import "moment/dist/locale/zh-tw"
 import moment from 'moment'
 import "animate.css"
-import { NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import Friend from './pages/friend'
 import AboutMe from './pages/aboutMe'
 moment.locale("zh-tw")
 
+const TIME_FORMAT = "YYYY年 MMM Do HH:mm:ss (ddd)"
+
+// 依照小時決定招呼語
+function getGreeting(hour) {
+  if (hour >= 5 && hour <= 10) return "おはよう！yogurtの自己紹介です。"
+  if (hour >= 11 && hour <= 16) return "こんにちは！yogurtの自己紹介です。"
+  return "こんばんは！yogurtの自己紹介です。"
+}
+
 function App() {
-  const [yogurt, setYogurt] = useState("こんにちは！yogurtの自己紹介です。")
-  const [nowTime, setNowTime] = useState(moment().format("YYYY年 MMM Do HH:mm:ss (ddd)"))
-  const [nowHour, setNowHour] = useState(moment().format("HH"))
+  const [now, setNow] = useState(() => moment())
+
   useEffect(() => {
     const timer = setInterval(() => {
-      setNowTime(moment().format("YYYY年 MMM Do HH:mm:ss (ddd)"))
+      setNow(moment())
     }, 1000)
-    const timer2 = setInterval(() => {
-      setNowHour(moment().format("HH"))
-    }, 3600000)
-    return () => {
-      clearInterval(timer)
-      clearInterval(timer2)
-    }
+    return () => clearInterval(timer)
   }, [])
-  useEffect(() => {
-    if (nowHour === "05" || nowHour === "06" || nowHour === "07" || nowHour === "08" || nowHour === "09" || nowHour === "10") {
-      setYogurt("おはよう！yogurtの自己紹介です。")
-    } else if (nowHour === "11" || nowHour === "12" || nowHour === "13" || nowHour === "14" || nowHour === "15" || nowHour === "16") {
-      setYogurt("こんにちは！yogurtの自己紹介です。")
-    } else {
-      setYogurt("こんばんは！yogurtの自己紹介です。")
-    }
-  }, [nowHour])
+
+  // 招呼語直接從目前時間算出來，整點一到就會換
+  const yogurt = getGreeting(now.hour())
+
   useEffect(() => {
     const orTitle = "優格の個網"
     const chTitle = "你怎麼拋棄我了:("
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) {
-        document.title = chTitle
-      } else {
-        document.title = orTitle
-      }
-    })
-  })
-
-
+    const handleVisibilityChange = () => {
+      document.title = document.hidden ? chTitle : orTitle
+    }
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange)
+    }
+  }, [])
 
   return (
     <>
-    
       <header>
-        <p id='nowTime'>{nowTime}</p>
-
+        <p id='nowTime'>{now.format(TIME_FORMAT)}</p>
       </header>
 
       <main>
-
-
-
         <div id="yogurtAnime">
           <TypeAnimation
             key={yogurt}
@@ -69,21 +59,13 @@ function App() {
             repeat={Infinity}
           />
         </div>
-          
-          <Routes>
-            <Route index element={<></>} />
-            <Route path='friend' element={
-              <Friend/>
-            } />  
-          </Routes>
-          
-          <Routes>
-            <Route path='aboutMe' element={
-              <AboutMe/>
-            }/>
 
-          </Routes>
-
+        <Routes>
+          <Route index element={<></>} />
+          <Route path='aboutMe' element={<AboutMe />} />
+          <Route path='friend' element={<Friend />} />
+          <Route path='*' element={<h2>找不到這個頁面 QAQ</h2>} />
+        </Routes>
       </main>
 
       <footer>
@@ -92,7 +74,6 @@ function App() {
         <NavLink to={'/friend'}>友站</NavLink>
         <h3>本網頁還在開發中</h3>
       </footer>
-      
     </>
   )
 }
